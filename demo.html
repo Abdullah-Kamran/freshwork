@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+       body {
+        font-family: "inter", sans-serif;
+      }
+
+      * {
+        margin: 0px;
+      }
+      nav {
+    position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+        height: 85px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: black;
+  }
+  nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+     align-items: center; 
+    flex-direction: row;
+    height: 85px;
+    margin-right: 30px;
+  }
+  .logo_icon {
+    margin-top: 5px !important;
+  } 
+  nav img {
+    margin-top: 8px;
+  }
+  nav ul div {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li a {
+   
+    color: white;
+    font-weight: 400;
+    padding-bottom: 0.125rem;
+    cursor: pointer;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0 30px ;
+    margin-top: 30px ;
+    text-decoration: none;
+  }
+ 
+  nav li:first-child {
+    margin-right: auto;
+  }
+ 
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+   
+     
+
+      .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+        overflow-y: scroll;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start ;
+        justify-content: flex-start ;
+        margin-right: 0px;
+      }
+      .sidebar li {
+        width: 89%;
+        line-height: 60px;
+        margin-left: 50px;
+        
+      }
+      .sidebar a {
+        width: 100%;
+        line-height: 60px;
+        color: black;
+        
+      }
+      .sidebar hr {
+        width: 100%;
+      }
+      .menu-button {
+        display: none;
+      }
+      @media (max-width:800px){
+        .hideOnMobile{
+          display: none;
+
+        }
+        .menu-button{
+          display: block;
+        }
+        .sidebar{
+         width: 100%;
+
+        }
+      }
+
+      @media (max-width:600px){
+        .sidebar a{
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        color: black;
+
+        }
+        .nine span {
+          font-size: 1.5rem !important;
+        }
+        .twelwe p {
+          font-size: 1.2rem !important;
+          letter-spacing: 1.2px !important;
+        }
+
+        .nine a {
+          font-size: 1.5rem !important;
+        }
+        .company p {
+          font-size: 1.5rem !important;
+        }
+        .company h1 {
+          font-size: 2rem !important;
+        }
+        .support p {
+          font-size: 1.5rem !important;
+        }
+        .support h1 {
+          font-size: 2rem !important;
+        }
+        .success p {
+          font-size: 1.5rem !important;
+        }
+        .success h1 {
+          font-size: 2rem !important;
+        }
+      }
+      .butt {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 121.83px;
+        height: 50px;
+        font-weight: bolder;
+        border-radius: 8px;
+       
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .what {
+        background-color: #99d5ff45;
+        width: 50%;
+        height: 1000px;
+      }
+      .form {
+        width: 50%;
+      }
+
+      .first {
+        display: flex;
+        padding-top: 75px;
+      }
+      .what h1 {
+        font-size: 1.875rem;
+        line-height: 2.375rem;
+        font-weight: 700;
+        margin-left: 14%;
+        margin-top: 80px;
+        color: #1d2026;
+      }
+      .tick {
+        margin-top: 30px;
+        margin-left: 14%;
+        margin-right: 12%;
+        display: flex;
+        align-items: flex-start;
+      }
+      .tick img {
+        height: 23px;
+      }
+      .tick p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        color: rgb(29, 32, 38);
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        margin-left: 23px;
+      }
+      .laptop {
+        display: flex;
+        margin-left: 14%;
+        margin-top: 40px;
+      }
+      .laptop img {
+        width: 465px;
+        height: 279px;
+      }
+      .eXKduE {
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        letter-spacing: -0.02em;
+        text-align: initial;
+        color: #1d2026;
+        margin-top: 80px;
+        margin-left: 8%;
+        margin-right: 12%;
+      }
+      .dEHGKh {
+        letter-spacing: -0.091rem;
+      }
+      .gYEUGp {
+        background: linear-gradient(
+            89.24deg,
+            rgb(133, 18, 224) 57.52%,
+            rgb(211, 0, 190) 103.1%
+          )
+          text;
+        -webkit-text-fill-color: transparent;
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        text-align: initial;
+        color: #1d2026;
+        margin-block: 0px;
+      }
+      .form p {
+        font: 1.125rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        margin-left: 8%;
+        margin-top: 20px;
+      }
+      .flex {
+        display: flex;
+
+        margin-top: 20px;
+      }
+
+      .f {
+        margin-left: 8%;
+      }
+      #fname {
+        width: 200px;
+        height: 40px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      #lname {
+        width: 200px;
+        height: 40px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+        margin-left: 25px;
+      }
+      #cname {
+        width: 440px;
+        height: 40px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      #bemail {
+        width: 440px;
+        height: 40px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      #phone {
+        width: 440px;
+        height: 40px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      #osize {
+        width: 454px;
+        height: 43px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      #soi {
+        width: 454px;
+        height: 43px;
+        font: 1rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        padding-left: 10px;
+        border-radius: 7px;
+        border: 1px solid;
+        border: 1px solid rgba(133, 133, 133, 0.747);
+        margin-top: 7px;
+      }
+      .sidebar img {
+        height: 50px;
+        width: 300px;
+      }
+      label {
+        color: #3f4551;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        max-width: 100%;
+        font-family: "Roboto", "Helvetica Neue", "Arial Nova", sans-serif;
+      }
+      input {
+        margin-bottom: 15px;
+      }
+      select {
+        margin-bottom: 15px;
+      }
+      .buttt {
+        background-color: rgb(133, 18, 224);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(133, 18, 224);
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 456px;
+        height: 43px;
+        font-weight: bolder;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+      .buttt:hover {
+        background-color: rgb(97, 18, 224);
+    border: none;
+      }
+      .lname {
+        margin-left: 25px;
+      }
+      .by {
+        margin-right: 35%;
+        font-size: 15px !important;
+        text-align: left;
+        margin-top: 30px !important;
+      }
+      .final {
+            min-height: 35vh;
+            display: grid;
+            place-items: center;
+            
+           
+        }
+        .final h1 {
+          font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    margin-bottom: -60px;
+        }
+        .slider {
+            height: 130px;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            margin-top: 0px;
+        }
+       
+        .slide-track {
+            display: flex;
+            width: calc(250px * 18);
+            animation: scroll 60s linear infinite;
+        }
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 9));
+            }
+        }
+        .slide {
+            height: 90px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;
+        }
+        .auto {
+            width: 50%;
+            transition: transform 1s;
+            margin-left: 20px;
+        }
+       
+       
+      .second h2 {
+        text-align: center;
+      }
+      .second p {
+        color: #3f3d3d;
+        font: 1.525rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .but {
+        background-color: rgb(133, 18, 224);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(133, 18, 224);
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 120.83px;
+        height: 50px;
+        font-weight: bolder;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+        margin-top: 38px;
+      }
+      .but:hover {
+        background-color: rgb(97, 18, 224);
+    border: none;
+      }
+
+      .nine span {
+        font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        margin-right: 1rem;
+        color: white;
+        font-weight: bold;
+        line-height: 50px;
+        background-color: black;
+      }
+      .nine a {
+        cursor: pointer;
+        font-weight: normal;
+        color: white;
+      }
+      .nine {
+        margin-top: 50px;
+        margin-left: 7%;
+      }
+      .nine hr {
+        margin-right: 8%;
+        opacity: 0.2;
+      }
+      .last {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        flex-wrap: wrap;
+      }
+      .company {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .support {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .success {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .company h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .support h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .success h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .company p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .support p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .success p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .success p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .support p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .company p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .android:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      .apple:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      .ten {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        background-color: black;
+      }
+      .end {
+        display: flex;
+        justify-content: center;
+        margin-left: 7%;
+      }
+      .download {
+        display: flex;
+        margin-right: 90px;
+        
+      }
+      .x {
+        margin-top: 15px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        margin-left: 12px;
+      }
+      .r {
+        margin-top: 14px;
+        margin-right: 9px;
+      }
+      .android {
+        height: 45px;
+        width: 140px;
+        background-color: black;
+        margin: 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.726);
+      }
+      .apple {
+        height: 45px;
+        width: 140px;
+        background-color: black;
+        margin: 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.726);
+      }
+      .android span {
+        font-size: 9px;
+        line-height: 20px;
+        margin-top: -5px;
+      }
+      .apple span {
+        font-size: 9px;
+        line-height: 20px;
+        margin-top: -5px;
+        margin-left: 6px;
+      }
+      .android p {
+        font-size: 17px;
+        line-height: 12px;
+      }
+      .apple p {
+        font-size: 17px;
+        line-height: 12px;
+        margin-left: 0px;
+      }
+      .android img {
+        margin-left: 7px;
+      }
+      .apple img {
+        margin-left: 7px;
+      }
+      .eleven hr {
+        margin-right: 8%;
+        opacity: 0.2;
+        margin-top: 10px;
+        margin-left: 8%;
+        color: white;
+      }
+      .twelwe {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 6%;
+       
+        margin-top: 50px;
+        padding-bottom: 80px;
+        background-color: black;
+        flex-wrap: wrap;
+       
+      }
+      .twelwe p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.8rem;
+        line-height: 30px;
+        margin: 10px 14px;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .black{
+        background-color: black;
+      }
+      .outer {
+      display: flex;
+      border-radius: 9px;
+      width: 123.83px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+      background: #202020;
+    }
+    .butt:hover {
+      border: none;
+    }
+   
+    
+    
+    .outer:hover {
+      animation: rotate 1.5s linear infinite;
+      background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    }
+    @keyframes rotate {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg);
+      }
+    }
+    @media (min-width: 800px) and (max-width: 1200px){
+      #fname{
+        width: 292px;
+       }
+       #lname{
+        width: 292px;
+       }
+    }
+    @media (min-width: 300px) and (max-width: 800px){
+      #fname{
+        width: 625px;
+       }
+       #lname{
+        width: 625px;
+       }
+       .flex{
+        flex-wrap: wrap;
+       }
+       .lname {
+        margin-left: 0px;
+       }
+       #lname {
+        margin-left: 0px;
+       }
+    }
+    @media (min-width: 300px) and (max-width: 1200px) {
+      .what {
+        display: none;
+      }
+      
+       .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+       }
+       .nav{
+        width: 1200px;
+       }
+       .form {
+        width: 70%;
+       }
+       .final{
+        width: 1200px;
+       }
+       .second{
+        width: 1200px;
+       }
+       .black{
+        width: 1200px;
+       }
+      
+      
+       #bemail{
+        width: 625px;
+       }
+       #cname{
+        width: 625px;
+       }
+       #osize{
+        width: 640px;
+       }
+       #phone{
+        width: 625px;
+       }
+       #soi{
+        width: 640px;
+       }
+       .buttt{
+        width: 640px;
+       }
+       .by {
+        margin-left: 0px;
+        margin-right: 0px;
+       }
+      
+    }
+    @media (min-width: 300px) and (max-width: 700px) {
+      .company{
+        width: 85%;
+      }
+      .success{
+        width: 85%;
+      }
+      .support{
+        width: 85%;
+      }
+      .twelwe p {
+       
+        text-align: left;
+        line-height: 30px;
+      }
+    }
+    .buttttt {
+        background-color: rgb(133, 18, 224);
+        color: white;
+        border: none;
+        box-shadow: none;
+        font-size: 1.325rem;
+        line-height: 1.75rem;
+        width: 80%;
+        height: 70px;
+        font-weight: bolder;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+    </style>
+ <nav>
+  <ul class="sidebar">
+    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li><a href="index.html"><img src="headerLogoLight.webp" height="28px" width="140px"></a></li>
+  <br><hr><li><a href="#">services</a></li><hr>
+  <li><a href="#">industries</a></li><hr>
+  <li><a href="#">support</a></li><hr>
+  <li><a href="demo.html">Demo</a></li><hr>
+  <li><a href="pricing.html">Pricing</a></li><hr>
+  <li><a href="#">languages</a></li><hr>
+  <li><a href="#">login</a></li><hr>
+  <a href="#"><button class="buttttt">Start free trial</button></a>
+  
+  
+</ul>
+  <ul>
+    <div>
+    <li class="logo_icon"><a href="index.html"><img src="headerLogoDark.webp" height="28px" width="140px"></a></li>
+  <li class="hideOnMobile"><a href="#">services</a></li>
+  <li class="hideOnMobile"><a href="#">industries</a></li>
+  <li class="hideOnMobile"><a href="#">support</a></li></div>
+  <div>
+  <li class="hideOnMobile"><a href="demo.html">Demo</a></li>
+  <li class="hideOnMobile"><a href="pricing.html">Pricing</a></li>
+  <li class="hideOnMobile"><a href="#"><img src="9022497_globe_simple_duotone_icon (1).png" height="30px" width="30px"/></a></li>
+  <li class="hideOnMobile"><a href="#"><img src="28679541_user_icon.png" height="30px" width="30px"/></a></li>
+  <li class="hideOnMobile"><a href="#"> <div class="outer button"><button class="butt">Free trials</button></div></a></li>
+  <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li></div>
+</ul>
+ </nav>
+
+
+
+ <div class="first">
+      <div class="what">
+        <h1>What to expect:</h1>
+        <div class="tick">
+          <img src="check-64.webp" />
+          <p>A 20-min chat with a solutions specialist</p>
+        </div>
+        <div class="tick">
+          <img src="check-64.webp" />
+          <p>Commitment-free consultation on your top needs and challenges</p>
+        </div>
+        <div class="tick">
+          <img src="check-64.webp" />
+          <p>Discover product capabilities and how Freshworks may help</p>
+        </div>
+        <div class="laptop"><img src="Demo-page-image.webp" /></div>
+      </div>
+      <div class="form">
+        <h2 font-weight="semiBold" class="sc-4555ca6a-0 eXKduE">
+          <!-- -->Demo
+          <span class="sc-b323b31-0 sc-e08f82ab-0 gYEUGp dEHGKh"
+            >Freshworks products</span
+          >
+        </h2>
+        <p>Request a demo with a solution expert.</p>
+        <form class="f">
+          <div class="flex">
+            <div>
+              <label for="fname">First name *</label><br />
+              <input
+                type="text"
+                id="fname"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div>
+              <label for="lname" class="lname">Last name *</label><br />
+              <input
+                type="text"
+                id="lname"
+                placeholder="Enter your last name"
+              />
+            </div>
+          </div>
+
+          <label for="bemail">Business email *</label><br />
+          <input
+            type="email"
+            id="bemail"
+            placeholder="Enter your business email"
+          /><br />
+
+          <label for="comp">Company name *</label><br />
+          <input
+            type="text"
+            id="cname"
+            placeholder="Enter your business email"
+          /><br />
+
+          <label for="osize">Organization size *</label><br />
+          <select id="osize" name="osize" aria-placeholder="Please Select">
+            <option value="" disabled selected hidden>Please Select</option>
+            <option value="1-10">1-10</option>
+            <option value="11-50">11-50</option>
+            <option value="51-250">51-250</option>
+            <option value="251-500">251-500</option>
+            <br />
+            <option value="501-1000">501-1000</option>
+            <br />
+            <option value="1001-5000">1001-5000</option>
+            <br />
+            <option value="5001-10000">5001-10000</option>
+            <option value="10000+">10000+</option>
+          </select>
+          <br />
+          <label for="soi">Solutions of interest *</label><br />
+          <select id="soi" name="soi" aria-placeholder="Please Select">
+            <option value="" disabled selected hidden>Please Select</option>
+            <option value="IT Service Management">IT Service Management</option>
+            <option value="Customer Service & Support">
+              Customer Service & Support
+            </option>
+            <option value="Conversational Engagement">
+              Conversational Engagement
+            </option>
+            <option value="Sales Automation">Sales Automation</option>
+            <option value="Marketing Automation">
+              Marketing Automation
+            </option></select
+          ><br />
+          <label for="phone">Phone</label><br />
+          <input
+            type="text"
+            id="phone"
+            placeholder="Enter your phone number"
+          /><br />
+          <button class="buttt">Request demo</button>
+        </form>
+        <p class="by">
+          By clicking <i>Request demo,</i> I accept the Freshworks<a href="#"
+            >Terms of Service</a
+          >
+          and <a href="#">Privacy Notice.</a>
+        </p>
+      </div>
+    </div>
+    <div class="final">
+      <h1>TRUSTED BY 60,000+ BUSINESSES OF ALL SIZES</h1>
+      <div class="slider">
+          <div class="slide-track">
+  
+              <div class="slide">
+                  <img class="auto" src="21.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="22.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="23.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="24.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="25.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="26.png">
+              </div>
+             
+              <div class="slide">
+                  <img class="auto" src="21.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="22.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="23.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="24.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="25.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="26.png">
+              </div>
+             
+              <div class="slide">
+                  <img class="auto" src="21.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="22.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="23.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="24.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="25.webp">
+              </div>
+              <div class="slide">
+                  <img class="auto" src="26.png">
+              </div>
+             
+             
+          </div>
+      </div>
+  </div>
+    <div class="second">
+      <h2 font-weight="semiBold" class="sc-4555ca6a-0 eXKduE">
+        Ready for a
+        <span class="sc-b323b31-0 sc-e08f82ab-0 gYEUGp dEHGKh"
+          >free trial?</span
+        >
+      </h2>
+      <p>
+        Try products yourself with a 14-day free trial. No credit card required.
+      </p>
+      <button class="but">Try now</button>
+    </div>
+
+    <div class="black">
+    <div class="nine">
+      <span
+        >Contact Freshworks
+        <a href="#">+1 (855) 747 6767 or sales@freshworks.com</a></span
+      >
+      <hr />
+    </div>
+
+    <div class="last">
+      <div class="company">
+        <h1>Company</h1>
+        <p>About</p>
+        <p>Leadership</p>
+        <p>Investors</p>
+        <p>Careers</p>
+        <p>Customers</p>
+        <p>Partners</p>
+        <p>Events</p>
+        <p>Insights & Trends</p>
+        <p>News</p>
+        <p>Contact</p>
+      </div>
+      <div class="support">
+        <h1>Support & Success</h1>
+        <p>Support</p>
+        <p>Training & Certification</p>
+        <p>Services</p>
+        <p>Student Academy</p>
+        <p>Community</p>
+      </div>
+      <div class="success">
+        <h1>Products</h1>
+        <p>What’s New</p>
+        <p>Customer Service Suite</p>
+        <p>Freshdesk</p>
+        <p>Freshchat</p>
+        <p>Freshservice</p>
+        <p>Freshsales</p>
+        <p>Freshsales Suite</p>
+        <p>Freshmarketer</p>
+        <p>Freshworks Neo</p>
+        <p>Freddy AI</p>
+      </div>
+    </div>
+    <div class="ten">
+      <div class="end">
+        <img class="r" src="headerLogoDark.webp" height="35px" width="150px" />
+        <div class="x">
+          <img
+            src="11244080_x_twitter_elon musk_twitter new logo_icon.png"
+            height="15px"
+          />
+        </div>
+        <div class="x"><img src="LinkedIn_alt-64.webp" height="15px" /></div>
+        <div class="x"><img src="06-facebook-64.webp" height="15px" /></div>
+        <div class="x"><img src="_youtube_video-64.webp" height="15px" /></div>
+      </div>
+      <div class="download">
+        <div class="android">
+          <img src="PlayStore-64.webp" height="33px" /><span
+            >GET IT ON
+            <p>Google Play</p></span
+          >
+        </div>
+        <div class="apple">
+          <img
+            src="2553039_app_apple_appstore_logo_device_icon (1).png"
+            height="33px"
+          /><span
+            >Download on the
+            <p>App Store</p></span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="eleven"><hr /></div>
+    <div class="twelwe">
+      <p>Legal</p>
+      <p>Privacy Notice</p>
+      <p>Site Terms</p>
+      <p>Cookie Policy</p>
+      <p>Do Not Share My Personal Information</p>
+      <p>Security</p>
+      <p>Accessibility</p>
+      <p>Unsubscribe</p>
+      <p>Sitemap</p>
+      <p>© 2024 Freshworks Inc. All Rights Reserved</p>
+    </div></div>
+    <script>
+       function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+    </script>
+  </body>
+</html>

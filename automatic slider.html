@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .final {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+           
+        }
+        .slider {
+            height: 250px;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+        .slide-track {
+            display: flex;
+            width: calc(250px * 18);
+            animation: scroll 40s linear infinite;
+        }
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 9));
+            }
+        }
+        .slide {
+            height: 200px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;
+        }
+        .auto {
+            width: 60%;
+            transition: transform 1s;
+            margin-left: 30px;
+        }
+       
+       
+    </style>
+    <div class="final">
+    <div class="slider">
+        <div class="slide-track">
+
+            <div class="slide">
+                <img class="auto" src="1.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="2.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="3.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="4.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="6.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="7.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="8.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="9.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="10.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="11.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="12.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="13.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="7.webp">
+            </div>
+            <div class="slide">
+                <img class="auto" src="6.webp">
+            </div>
+           
+        </div>
+    </div>
+</div>
+</body>
+</html>

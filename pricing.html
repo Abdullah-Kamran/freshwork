@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "inter", sans-serif;
+    }
+
+    * {
+      margin: 0px;
+    }
+
+    nav {
+    position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+        height: 85px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: black;
+  }
+  nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 85px;
+    margin-right: 30px;
+  }
+  .logo_icon {
+    margin-top: 5px !important;
+  } 
+  nav img {
+    margin-top: 8px;
+  }
+  nav ul div {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+   text-decoration: none;
+    color: white;
+    font-weight: 400;
+    padding-bottom: 0.125rem;
+    cursor: pointer;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0 30px;
+   
+
+  }
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+  nav li:first-child {
+    margin-right: auto;
+  }
+ 
+       
+    
+     
+
+      .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+        overflow-y: scroll;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start ;
+        justify-content: flex-start ;
+        margin-right: 0px;
+      }
+      .sidebar li {
+        width: 89%;
+        line-height: 60px;
+        margin-left: 50px;
+      }
+      .sidebar a {
+        width: 100%;
+        line-height: 60px;
+        color: black;
+        
+      }
+      .sidebar img {
+        height: 50px;
+        width: 300px;
+      }
+      .sidebar hr {
+        width: 100%;
+      }
+      .menu-button {
+        display: none;
+      }
+      @media (max-width:800px){
+        .hideOnMobile{
+          display: none;
+
+        }
+        .menu-button{
+          display: block;
+        }
+        .sidebar{
+         width: 100%;
+
+        }
+      }
+
+      @media (max-width:600px){
+        .sidebar a{
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        color: black;
+
+        }
+        .nine span {
+          font-size: 1.5rem !important;
+        }
+        .twelwe p {
+          font-size: 1.2rem !important;
+          letter-spacing: 1.2px !important;
+        }
+        .nine a {
+          font-size: 1.5rem !important;
+        }
+        .company p {
+          font-size: 1.5rem !important;
+        }
+        .company h1 {
+          font-size: 2rem !important;
+        }
+        .support p {
+          font-size: 1.5rem !important;
+        }
+        .support h1 {
+          font-size: 2rem !important;
+        }
+        .success p {
+          font-size: 1.5rem !important;
+        }
+        .success h1 {
+          font-size: 2rem !important;
+        }
+      }
+      .butt {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 121.83px;
+        height: 50px;
+        font-weight: bolder;
+        border-radius: 8px;
+      }
+    button:hover {
+      cursor: pointer;
+    }
+    .first {
+      height: 345px;
+      background: linear-gradient(
+          rgb(7, 6, 36) -17.19%,
+          rgba(7, 6, 36, 0) 111.4%
+        ),
+        linear-gradient(
+          86.97deg,
+          rgba(255, 168, 0, 0.4) -0.67%,
+          rgba(25, 187, 125, 0.4) 24.91%,
+          rgba(0, 82, 204, 0.4) 48.82%,
+          rgba(69, 164, 236, 0.4) 72.18%,
+          rgba(184, 95, 255, 0.4) 88.31%
+        ),
+        rgb(7, 6, 36);
+        padding-top: 82px;
+    }
+    .first h1 {
+      font-size: 4.5rem;
+      line-height: 5.625rem;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+      font: 700 Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      letter-spacing: -0.04em;
+    }
+    .first p {
+      font-size: 1.5rem;
+      line-height: 2.375rem;
+      color: rgb(255, 255, 255);
+      font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 400;
+    }
+    #text-with-shadow-underline {
+      color: rgb(133, 18, 224);
+      line-height: 30px;
+      font-size: 1.5rem;
+      display: inline-block; /* Required to apply box-shadow correctly */
+      position: relative; /* Ensure positioning for shadow placement */
+    }
+    #text-with-shadow-underline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px; /* Thickness of the underline */
+      background-color: black; /* Color of the underline */
+      transform: translateY(
+        15px
+      ); /* Adjust this value to control the distance from the text */
+      border-radius: 3px;
+    }
+    .it {
+      display: flex;
+      justify-content: center;
+    }
+    .it h1 {
+      margin: 30px;
+      font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      cursor: pointer;
+    }
+    .it h1:hover{
+      color: rgb(133, 18, 224);
+    }
+    #ser {
+      font-size: 1.5rem;
+    }
+    #crm {
+      font-size: 1.5rem;
+    }
+    .third {
+      background-color: rgb(192, 224, 249);
+      
+      margin-top: -26px;
+    }
+    .suite {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+    .chat {
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0.375rem 0.875rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      color: rgb(63, 69, 81);
+      font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      line-height: 1.75rem;
+      font-size: 1.125rem;
+      margin: 20px 9px;
+      border: none;
+    }
+    .chat:hover {
+      background-color: rgb(238, 238, 238);
+    }
+    #resh {
+      background-color: rgb(65, 65, 65);
+      color: white;
+    }
+    .toggle-btn {
+        display: flex;
+        border: 1px solid  rgb(158, 158, 158);
+        border-radius: 5px;
+        overflow: hidden;
+        width: 160px;
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        color: rgb(158, 158, 158);
+        font-weight: bolder;
+        font-size: 15px;
+        background-color: white;
+      }
+      .toggle-btn:hover{
+        color: rgb(65, 65, 65);
+      }
+      .toggle-btn div {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .toggle-btn .active {
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        
+      }
+      .mt6 {
+        display: flex;
+        justify-content: right;
+        margin-top: 50px;
+        margin-right: 90px;
+        
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        top: 0px;
+        bottom: 0px;
+        right: 10px;
+        left: 0px;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+    
+
+      /* Position the "next button" to the right */
+     
+
+      .container {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box {
+        height: auto;
+        padding-bottom:30px ;
+        width: 272px;
+        background-color: white;
+        margin: 15px;
+        border-radius: 30px;
+      }
+      .box h1 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        line-height: 1.75rem;
+        height: 50px;
+        background-color: rgb(231 231 231 / 77%);
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        text-align: center;
+        padding-top: 20px;
+      }
+      .box p {
+        font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        color: rgb(80, 87, 102);
+        height: 100px;
+        text-align: center;
+        margin: 20px 20px;
+      }
+      .dollar h1 {
+        background-color: white;
+        height: 40px;
+        font-size: 2.5rem;
+        color: #1d2026;
+      }
+      .dollar p {
+        margin: 0px 50px;
+      }
+      .dollar button {
+        display: flex;
+        text-decoration: none;
+        transition: border 0s linear 0s;
+        background-color: transparent;
+        color: rgb(29, 32, 38);
+        border: 2px solid rgb(29, 32, 38);
+        border-radius: 8px;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 232px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        -webkit-box-pack: center;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: bolder;
+      }
+      .dollar button:hover{
+        background-color: #929090;  
+      }
+      .box ul li {
+        font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        color: rgb(80, 87, 102);
+
+        text-align: left;
+        margin-top: 20px;
+        margin-right: 20px;
+        text-underline-offset: 6px;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+      }
+      #box1 ul {
+        margin-top: 50px;
+      }
+      #box2 ul {
+        margin-top: -10px;
+      }
+      #box3 ul {
+        margin-top: -10px;
+      }
+      .box h2 {
+        line-height: 60px;
+        font-weight: 700;
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        color: #1d2026;
+        font-size: 1.125rem;
+        margin-top: 42px;
+        margin-left: 24px;
+      }
+    .fourth {
+      padding-bottom: 50px;
+      background-color: rgb(229, 243, 252);
+    }
+    .tea {
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: wrap;
+      gap: 40px 24px;
+      margin-left: 10%;
+      margin-right: 8%;
+      margin-top: 60px;
+    }
+    .fourth h1 {
+      font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova",
+        sans-serif;
+      letter-spacing: -0.02em;
+      text-align: center;
+      text-align: center;
+      padding-top: 80px;
+      color: #1d2026;
+    }
+    .item {
+      background-color: white;
+      width: 342px;
+      height: 272px;
+
+      border-radius: 20px;
+    }
+    .item h1 {
+      font: 700 1.5rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-left: 23px;
+      color: #1d2026;
+      padding-top: 30px;
+    }
+    .item:hover {
+       h1{
+        color: rgb(133, 18, 224);
+      }
+      cursor: pointer;
+    }
+    .item p {
+      font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova",
+        sans-serif;
+      color: rgb(93, 100, 118);
+      height: 135px;
+      margin-left: 23px;
+      margin-right: 23px;
+      margin-top: 15px;
+    }
+    .item span {
+      font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova",
+        sans-serif;
+      color: rgb(133, 18, 224);
+      font-weight: bolder;
+      margin-left: 23px;
+    }
+    #item4,
+    #item5 {
+      height: 212px;
+    }
+    #item4 p,
+    #item5 p {
+      height: 90px;
+    }
+    #item1 p {
+      height: 105px;
+    }
+    .fifth h1 {
+      font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova",
+        sans-serif;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: rgb(29, 32, 38);
+      padding-bottom: 50px;
+    }
+    .fifth {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .how {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .plus {
+      display: flex;
+      margin: 30px;
+      width: 34%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .plus1 {
+      display: flex;
+      margin-top: 1px;
+      margin-left: 50px;
+      align-items: center;
+      width: 34%;
+      justify-content: space-between;
+    }
+    .iospzc {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+      color: rgb(29, 32, 38);
+    }
+    .plus img {
+      height: 30px;
+      
+    }
+    .plus1 img {
+      height: 30px;
+      
+    }
+    .six h1 {
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: rgb(29, 32, 38);
+    }
+    .six {
+        background-color: rgb(226, 244, 250);
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .six p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+        color: rgb(80, 87, 102);
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .six span{
+        font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova",
+        sans-serif;
+      color: rgb(133, 18, 224);
+      font-weight: bolder;
+      display: block !important;
+      margin: auto !important;
+      text-align: center !important;
+    }
+    .nine span {
+        font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        margin-right: 1rem;
+        color: white;
+        font-weight: bold;
+        line-height: 50px;
+        background-color: black;
+      }
+      .nine a {
+        cursor: pointer;
+        font-weight: normal;
+        color: white;
+      }
+      .nine {
+        margin-top: 0px;
+        margin-left: 7%;
+      }
+      .nine hr {
+        margin-right: 8%;
+        opacity: 0.2;
+      }
+      .last {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        flex-wrap: wrap;
+      }
+      .company {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .support {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .success {
+        width: 28.5%;
+        margin-top: 50px;
+        background-color: black;
+      }
+      .company h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .support h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .success h1 {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 0.625rem;
+        color: white;
+        font-weight: bolder;
+      }
+      .company p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .support p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .success p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.95rem;
+        line-height: 40px;
+        opacity: 1;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .success p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .support p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .company p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .android:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      .apple:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      .ten {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        background-color: black;
+      }
+      .end {
+        display: flex;
+        justify-content: center;
+        margin-left: 7%;
+      }
+      .download {
+        display: flex;
+        margin-right: 90px;
+      }
+      .x {
+        margin-top: 15px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        margin-left: 12px;
+      }
+      .r {
+        margin-top: 14px;
+        margin-right: 9px;
+      }
+      .android {
+        height: 45px;
+        width: 140px;
+        background-color: black;
+        margin: 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.726);
+      }
+      .apple {
+        height: 45px;
+        width: 140px;
+        background-color: black;
+        margin: 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.726);
+      }
+      .android span {
+        font-size: 9px;
+        line-height: 20px;
+        margin-top: -5px;
+      }
+      .apple span {
+        font-size: 9px;
+        line-height: 20px;
+        margin-top: -5px;
+        margin-left: 6px;
+      }
+      .android p {
+        font-size: 17px;
+        line-height: 12px;
+      }
+      .apple p {
+        font-size: 17px;
+        line-height: 12px;
+        margin-left: 0px;
+      }
+      .android img {
+        margin-left: 7px;
+      }
+      .apple img {
+        margin-left: 7px;
+      }
+      .eleven hr {
+        margin-right: 8%;
+        opacity: 0.2;
+        margin-top: 10px;
+        margin-left: 8%;
+        color: white;
+      }
+      .twelwe {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 6%;
+        
+        margin-top: 50px;
+        padding-bottom: 80px;
+        background-color: black;
+        flex-wrap: wrap;
+        
+      }
+      .twelwe p {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        font-size: 0.8rem;
+        margin: 10px 14px;
+        color: white;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+      .black{
+        background-color: black;
+      }
+      .outer {
+      display: flex;
+      border-radius: 9px;
+      width: 123.83px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+      background: #202020;
+    }
+    .butt:hover {
+      border: none;
+    }
+   
+    
+    
+    .outer:hover {
+      animation: rotate 1.5s linear infinite;
+      background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    }
+    @keyframes rotate {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg);
+      }
+    }
+    @media (min-width: 300px) and (max-width: 1200px) {
+     
+       .first{
+        
+        width: 1200px;
+       }
+       .nav{
+        width: 1200px;
+       }
+       .form {
+        width: 70%;
+       }
+      
+       .second{
+        width: 1200px;
+       }
+       .third{
+        width: 1200px;
+       }
+       .fourth{
+        width: 1200px;
+       }
+      
+       .fifth{
+        width: 1200px;
+       }
+       .six{
+        width: 1200px;
+       }
+       .black{
+        width: 1200px;
+       }
+      
+    }
+    @media (min-width: 300px) and (max-width: 700px) {
+      .item{
+        width: 80%;
+      }
+      .tea {
+        justify-content: center;
+      }
+      .plus{
+        width: 80%;
+        margin-left: 80px;
+      }
+      .plus1{
+        width: 80%;
+        
+      }
+      .box {
+        width: 80%;
+      }
+      .dollar button {
+        display: block;
+        margin:auto
+      }
+      .box ul li {
+        text-align: center;
+      }
+      .box h2 {
+        text-align: center;
+      }
+    }
+    @media (min-width: 300px) and (max-width: 700px) {
+      .company{
+        width: 85%;
+      }
+      .success{
+        width: 85%;
+      }
+      .support{
+        width: 85%;
+      }
+      .twelwe p {
+       
+        text-align: left;
+        line-height: 30px;
+      }
+    }
+    .buttttt {
+        background-color: rgb(133, 18, 224);
+        color: white;
+        border: none;
+        box-shadow: none;
+        font-size: 1.325rem;
+        line-height: 1.75rem;
+        width: 80%;
+        height: 70px;
+        font-weight: bolder;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+      }
+  </style>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html"><img src="headerLogoLight.webp" height="28px" width="140px"></a></li>
+      <br><hr><li><a href="#">services</a></li><hr>
+      <li><a href="#">industries</a></li><hr>
+      <li><a href="#">support</a></li><hr>
+      <li><a href="demo.html">Demo</a></li><hr>
+      <li><a href="pricing.html">Pricing</a></li><hr>
+      <li><a href="#">languages</a></li><hr>
+      <li><a href="#">login</a></li><hr>
+      <a href="#"><button class="buttttt">Start free trial</button></a>
+      
+      
+    </ul>
+      <ul>
+        <div>
+        <li class="logo_icon"><a href="index.html"><img src="headerLogoDark.webp" height="28px" width="140px"></a></li>
+      <li class="hideOnMobile"><a href="#">services</a></li>
+      <li class="hideOnMobile"><a href="#">industries</a></li>
+      <li class="hideOnMobile"><a href="#">support</a></li></div>
+      <div>
+      <li class="hideOnMobile"><a href="demo.html">Demo</a></li>
+      <li class="hideOnMobile"><a href="pricing.html">Pricing</a></li>
+      <li class="hideOnMobile"><a href="#"><img src="9022497_globe_simple_duotone_icon (1).png" height="30px" width="30px"/></a></li>
+      <li class="hideOnMobile"><a href="#"><img src="28679541_user_icon.png" height="30px" width="30px"/></a></li>
+      <li class="hideOnMobile"><a href="#"> <div class="outer button"><button class="butt">Free trials</button></div></a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li></div>
+    </ul>
+     </nav>
+    <div class="first">
+      <h1>Freshdesk pricing</h1>
+      <p>
+        Freshdesk combines best-in-class ticketing, self-service, and reporting.
+      </p>
+    </div>
+    <div class="second">
+      <div class="it">
+        <h1 id="text-with-shadow-underline">Customer Service</h1>
+        <h1 id="ser">IT Service</h1>
+        <h1 id="crm">CRM</h1>
+      </div>
+    </div>
+    <div class="third">
+      <div class="suite">
+        <button class="chat">Customer Service Suite</button>
+        <button id="resh" class="chat">Freshdesk</button>
+        <button class="chat">Freshchat</button>
+        <button class="chat">Freshcaller</button>
+      </div>
+      <div class="mt6">
+        <div class="toggle-btn">
+          <div onclick="toggleSlides(1)" id="monthly" class="active">Monthly</div>
+          <div onclick="toggleSlides(2)" id="annually">Annually</div>
+        </div>
+      </div>
+    
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="container">
+            <div id="box1" class="box">
+              <h1>Free</h1>
+              <p>Get going for free</p>
+              <div class="dollar">
+                <h1>$0</h1>
+                <p>Up to 10 agents</p>
+                <button>Start free trial</button>
+              </div>
+              <ul>
+                <li>Integrated ticketing across email and social</li>
+                <li>Ticket Dispatch</li>
+                <li>Knowledge Base</li>
+                <li>Ticket Trend Report</li>
+                <li>Out-of-the-box analytics and reporting</li>
+                <li>Choose your data center location</li>
+                <li>Team collaboration</li>
+                <li>24x7 email support</li>
+              </ul>
+            </div>
+            <div id="box2" class="box">
+              <h1>Growth</h1>
+              <p>Intuitive, industry-leading support for growing businesses</p>
+              <div class="dollar">
+                <h1>$18</h1>
+                <p>/agent/month, billed monthly</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Free and...</h2>
+              <ul>
+                <li>Automation</li>
+                <li>Collision Detection</li>
+                <li>1000+ marketplace apps</li>
+                <li>In-depth helpdesk report</li>
+                <li>SLA management & business hours</li>
+                <li>Custom Email Server</li>
+                <li>Custom Ticket Views</li>
+                <li>Custom ticket fields & status</li>
+                <li>Custom SSL</li>
+                <li>Easily track time spent by agents on tickets</li>
+                <li>24x5 phone support</li>
+              </ul>
+            </div>
+            <div id="box3" class="box">
+              <h1>Pro</h1>
+              <p>Advanced automation for high performance</p>
+              <div class="dollar">
+                <h1>$59</h1>
+                <p>/agent/month, billed monthly</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Growth and...</h2>
+              <ul>
+                <li>Multiple products</li>
+                <li>Includes up to 5000 Collaborators</li>
+                <li>Round-robin routing</li>
+                <li>Custom Roles</li>
+                <li>Custom objects</li>
+                <li>Custom Reports and Dashboards</li>
+                <li>Segment customers for personalized support</li>
+                <li>Customer journey</li>
+                <li>Canned forms</li>
+                <li>Manage versions in knowledge base</li>
+                <li>Community forums</li>
+                <li>Extendable API Limits</li>
+                <li>CSAT surveys & reports</li>
+                <li>Portal customization</li>
+                <li>IP range restriction</li>
+                <li>24x5 chat support</li>
+              </ul>
+            </div>
+            <div id="box4" class="box">
+              <h1>Enterprise</h1>
+              <p>Fully featured with bots for enterprise-level support</p>
+              <div class="dollar">
+                <h1>$96</h1>
+                <p>/agent/month, billed monthly</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Pro and...</h2>
+              <ul>
+                <li>Unlimited products</li>
+                <li>Sandbox</li>
+                <li>Easily manage agent shifts across time zones</li>
+                <li>Audit log</li>
+                <li>Skill-based routing</li>
+                <li>Knowledge base approval workflow</li>
+                <li>Flexible knowledge base hierarchy</li>
+                <li>IP range restriction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="container">
+            <div id="box1" class="box">
+              <h1>Free</h1>
+              <p>Get going for free</p>
+              <div class="dollar">
+                <h1>$0</h1>
+                <p>Up to 10 agents</p>
+                <button>Start free trial</button>
+              </div>
+              <ul>
+                <li>Integrated ticketing across email and social</li>
+                <li>Ticket Dispatch</li>
+                <li>Knowledge Base</li>
+                <li>Ticket Trend Report</li>
+                <li>Out-of-the-box analytics and reporting</li>
+                <li>Choose your data center location</li>
+                <li>Team collaboration</li>
+                <li>24x7 email support</li>
+              </ul>
+            </div>
+            <div id="box2" class="box">
+              <h1>Growth</h1>
+              <p>Intuitive, industry-leading support for growing businesses</p>
+              <div class="dollar">
+                <h1>$15</h1>
+                <p>/agent/month, billed annually</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Free and...</h2>
+              <ul>
+                <li>Automation</li>
+                <li>Collision Detection</li>
+                <li>1000+ marketplace apps</li>
+                <li>In-depth helpdesk report</li>
+                <li>SLA management & business hours</li>
+                <li>Custom Email Server</li>
+                <li>Custom Ticket Views</li>
+                <li>Custom ticket fields & status</li>
+                <li>Custom SSL</li>
+                <li>Easily track time spent by agents on tickets</li>
+                <li>24x5 phone support</li>
+              </ul>
+            </div>
+            <div id="box3" class="box">
+              <h1>Pro</h1>
+              <p>Advanced automation for high performance</p>
+              <div class="dollar">
+                <h1>$65</h1>
+                <p>/agent/month, billed annually</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Growth and...</h2>
+              <ul>
+                <li>Multiple products</li>
+                <li>Includes up to 5000 Collaborators</li>
+                <li>Round-robin routing</li>
+                <li>Custom Roles</li>
+                <li>Custom objects</li>
+                <li>Custom Reports and Dashboards</li>
+                <li>Segment customers for personalized support</li>
+                <li>Customer journey</li>
+                <li>Canned forms</li>
+                <li>Manage versions in knowledge base</li>
+                <li>Community forums</li>
+                <li>Extendable API Limits</li>
+                <li>CSAT surveys & reports</li>
+                <li>Portal customization</li>
+                <li>IP range restriction</li>
+                <li>24x5 chat support</li>
+              </ul>
+            </div>
+            <div id="box4" class="box">
+              <h1>Enterprise</h1>
+              <p>Fully featured with bots for enterprise-level support</p>
+              <div class="dollar">
+                <h1>$79</h1>
+                <p>/agent/month, billed annually</p>
+                <button>Start free trial</button>
+              </div>
+              <h2>Everything in Pro and...</h2>
+              <ul>
+                <li>Unlimited products</li>
+                <li>Sandbox</li>
+                <li>Easily manage agent shifts across time zones</li>
+                <li>Audit log</li>
+                <li>Skill-based routing</li>
+                <li>Knowledge base approval workflow</li>
+                <li>Flexible knowledge base hierarchy</li>
+                <li>IP range restriction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Navigation buttons -->
+        
+      </div>
+    </div>
+    <div class="fourth">
+      <h1>Enhance your experience with add-ons</h1>
+      <div class="tea">
+        <div id="item1" class="item">
+          <h1>Freshbots by Freddy Self Service</h1>
+          <p>
+            Freshbot sessions let you engage with customers 24/7 across web
+            channels.
+          </p>
+          <span>Learn more &rarr;</span>
+        </div>
+        <div id="item2" class="item">
+          <h1>Freddy Copilot</h1>
+          <p>Personal generative AI assistant for your support team</p>
+          <span>Learn more &rarr;</span>
+        </div>
+        <div id="item3" class="item">
+          <h1>Freddy Insights</h1>
+          <p>
+            Generative AI-powered performance analysis and recommendations for
+            leaders
+          </p>
+          <span>Learn more &rarr;</span>
+        </div>
+        <div id="item4" class="item">
+          <h1>Freshcaller</h1>
+          <p>Engage customers over phone with the Freshcaller add-on.</p>
+          <span>Learn more &rarr;</span>
+        </div>
+        <div id="item5" class="item">
+          <h1>Day Passes</h1>
+          <p>Add extra agents to your account for a day</p>
+          <span>Learn more &rarr;</span>
+        </div>
+      </div>
+    </div>
+    <div class="fifth">
+      <h1>Frequently asked questions</h1>
+      <div class="how">
+        <div class="plus">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            How does the 14-day free trial work?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus1">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            What happens to Freddy Copilot and Freddy Insights after the beta program ends?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            Can I upgrade or downgrade my subscription?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus1">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            What is a Freshbot session?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            How does the 14-day free trial work?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus1">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            How does the 14-day free trial work?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            How does the 14-day free trial work?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+        <div class="plus1">
+          <h6 class="sc-4555ca6a-0 iospzc">
+            How does the 14-day free trial work?
+          </h6>
+          <img src="plus-64.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="six"><h1>Day Passes</h1><br>
+    <p>Need some extra hands on support?</p><br><br>
+<p>Expecting a spike in support traffic or need subject matter expertise? Day passes help you to add extra agents who have the scope of a normal agent for a day at a time. Day passes would be valid until the end of the day or 00:00 hours.</p>
+<br>
+<br>
+<span>Read more &rarr;</span>
+
+</div>
+<div class="black">
+    <div class="nine">
+      <span
+        >Contact Freshworks
+        <a href="#">+1 (855) 747 6767 or sales@freshworks.com</a></span
+      >
+      <hr />
+    </div>
+
+    <div class="last">
+      <div class="company">
+        <h1>Company</h1>
+        <p>About</p>
+        <p>Leadership</p>
+        <p>Investors</p>
+        <p>Careers</p>
+        <p>Customers</p>
+        <p>Partners</p>
+        <p>Events</p>
+        <p>Insights & Trends</p>
+        <p>News</p>
+        <p>Contact</p>
+      </div>
+      <div class="support">
+        <h1>Support & Success</h1>
+        <p>Support</p>
+        <p>Training & Certification</p>
+        <p>Services</p>
+        <p>Student Academy</p>
+        <p>Community</p>
+      </div>
+      <div class="success">
+        <h1>Products</h1>
+        <p>What’s New</p>
+        <p>Customer Service Suite</p>
+        <p>Freshdesk</p>
+        <p>Freshchat</p>
+        <p>Freshservice</p>
+        <p>Freshsales</p>
+        <p>Freshsales Suite</p>
+        <p>Freshmarketer</p>
+        <p>Freshworks Neo</p>
+        <p>Freddy AI</p>
+      </div>
+    </div>
+    <div class="ten">
+      <div class="end">
+        <img class="r" src="headerLogoDark.webp" height="35px" width="150px" />
+        <div class="x">
+          <img
+            src="11244080_x_twitter_elon musk_twitter new logo_icon.png"
+            height="15px"
+          />
+        </div>
+        <div class="x"><img src="LinkedIn_alt-64.webp" height="15px" /></div>
+        <div class="x"><img src="06-facebook-64.webp" height="15px" /></div>
+        <div class="x"><img src="_youtube_video-64.webp" height="15px" /></div>
+      </div>
+      <div class="download">
+        <div class="android">
+          <img src="PlayStore-64.webp" height="33px" /><span
+            >GET IT ON
+            <p>Google Play</p></span
+          >
+        </div>
+        <div class="apple">
+          <img
+            src="2553039_app_apple_appstore_logo_device_icon (1).png"
+            height="33px"
+          /><span
+            >Download on the
+            <p>App Store</p></span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="eleven"><hr /></div>
+    <div class="twelwe">
+      <p>Legal</p>
+      <p>Privacy Notice</p>
+      <p>Site Terms</p>
+      <p>Cookie Policy</p>
+      <p>Do Not Share My Personal Information</p>
+      <p>Security</p>
+      <p>Accessibility</p>
+      <p>Unsubscribe</p>
+      <p>Sitemap</p>
+      <p>© 2024 Freshworks Inc. All Rights Reserved</p>
+    </div></div>
+
+    <script>
+       function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+       let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+
+    function toggleSlides(n) {
+      let monthlyBtn = document.getElementById("monthly");
+      let annuallyBtn = document.getElementById("annually");
+
+      if (n === 1) {
+        monthlyBtn.classList.add("active");
+        annuallyBtn.classList.remove("active");
+        currentSlide(1); // Show Monthly slides
+      } else {
+        annuallyBtn.classList.add("active");
+        monthlyBtn.classList.remove("active");
+        currentSlide(2); // Show Annually slides
+      }
+    }
+    </script>
+  </body>
+</html>

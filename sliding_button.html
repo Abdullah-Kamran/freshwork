@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    
+    .outer {
+      display: flex;
+      
+      background: #111;
+    }
+    .button {
+      height: 70px;
+      width: 220px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+    }
+    
+    .button button{
+      height: 60px;
+      width: 210px;
+      border-radius: 50px;
+    }
+    .outer:hover {
+      animation: rotate 1.5s linear infinite;
+      background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    }
+    @keyframes rotate {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+  
+    <div class="outer button">
+      <button>hover me</button>
+    </div>
+  
+</body>
+</html>
+@media (min-width: 300px) and (max-width: 1200px) {
+  .what {
+    display: none;
+  }
+  
+   .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+   }
+   .nav{
+    width: 1200px;
+   }
+   .form {
+    width: 70%;
+   }
+   .final{
+    width: 1200px;
+   }
+   .second{
+    width: 1200px;
+   }
+   .black{
+    width: 1200px;
+   }
+   #fname{
+    width: 292px;
+   }
+   #lname{
+    width: 292px;
+   }
+  
+   #bemail{
+    width: 625px;
+   }
+   #cname{
+    width: 625px;
+   }
+   #osize{
+    width: 640px;
+   }
+   #phone{
+    width: 625px;
+   }
+   #soi{
+    width: 640px;
+   }
+   .buttt{
+    width: 640px;
+   }
+   .by {
+    margin-left: 0px;
+    margin-right: 0px;
+   }
+  
+}
+@media (min-width: 300px) and (max-width: 1200px) {
+  #fname{
+    width: 625px;
+   }
+   #lname{
+    width: 625px;
+    margin-left: 0px;
+   }
+   .lname{
+    margin-left: 0px;
+   }
+}

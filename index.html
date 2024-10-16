@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>freshworks</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "inter", sans-serif;
+      }
+
+      * {
+        margin: 0px;
+      }
+
+      nav {
+    position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+        height: 85px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+  }
+  nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+  }
+  nav ul div {
+    display: flex;
+  }
+  
+  nav a {
+   
+    
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+   
+   color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding-bottom: 0.125rem;
+    cursor: pointer;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0 30px;
+    margin-top: 30px;
+   
+       
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+ 
+  nav li:first-child {
+    margin-right: auto;
+  }
+ 
+       
+    
+     
+
+      .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+        overflow-y: scroll;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start ;
+        justify-content: flex-start ;
+      }
+      .sidebar li {
+        width: 100%;
+        line-height: 60px;
+        margin-left: 50px;
+        
+      }
+      .sidebar a {
+        width: 100%;
+        line-height: 60px;
+        
+      }
+      .sidebar hr {
+        width: 100%;
+      }
+      .menu-button {
+        display: none;
+      }
+      @media (max-width:800px){
+        .hideOnMobile{
+          display: none;
+
+        }
+        .menu-button{
+          display: block;
+        }
+        .sidebar{
+         width: 100%;
+
+        }
+      }
+
+      @media (max-width:600px){
+        .sidebar a{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+
+        }
+        .nine span {
+          font-size: 1.5rem !important;
+        }
+        .sim img {
+          width: 100% !important;
+          height: 900px !important;
+        }
+        
+        .nine a {
+          font-size: 1.5rem !important;
+        }
+        .company p {
+          font-size: 1.5rem !important;
+        }
+        .company h1 {
+          font-size: 2rem !important;
+        }
+        .support p {
+          font-size: 1.5rem !important;
+        }
+        .twelwe p {
+          font-size: 1.2rem !important;
+          letter-spacing: 1.2px !important;
+        }
+        .support h1 {
+          font-size: 2rem !important;
+        }
+        .success p {
+          font-size: 1.5rem !important;
+        }
+        .success h1 {
+          font-size: 2rem !important;
+        }
+      }
+      .butt {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 121.83px;
+        height: 50px;
+        font-weight: bolder;
+        border-radius: 8px;
+      }
+      .buttt {
+        background-color: rgb(133, 18, 224);
+        color: white;
+        border: none;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 121.83px;
+        height: 50px;
+        font-weight: bolder;
+        border-radius: 8px;
+      }
+      .buttt:hover{
+        background-color: rgb(107, 18, 224);
+      }
+      .sidebar img {
+        height: 50px;
+        width: 300px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .first {
+        background: linear-gradient(
+            rgb(7, 6, 36) -17.19%,
+            rgba(7, 6, 36, 0) 111.4%
+          ),
+          linear-gradient(
+            86.97deg,
+            rgba(255, 168, 0, 0.4) -0.67%,
+            rgba(25, 187, 125, 0.4) 24.91%,
+            rgba(0, 82, 204, 0.4) 48.82%,
+            rgba(69, 164, 236, 0.4) 72.18%,
+            rgba(184, 95, 255, 0.4) 88.31%
+          ),
+          rgb(7, 6, 36);
+          margin-top: 80px;
+        
+      }
+      .same {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .sum {
+        width: 49%;
+        padding-left: 6.8%;
+        padding-right: 0%;
+        padding-top: 50px;
+      }
+      .sum p {
+        line-height: 2.375rem;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
+      .sim {
+        width: 49%;
+        margin-left: 7%;
+        padding-right: 8%;
+        padding-top: 50px;
+      }
+      .sim img {
+        height: 509.45px;
+        width: 509.45px;
+      }
+      .dEHGKh {
+        letter-spacing: -0.091rem;
+        text-decoration: none;
+      }
+      .bppLfp {
+        background: linear-gradient(
+            90.05deg,
+            rgb(181, 255, 211) 0.02%,
+            rgb(209, 164, 255) 39.16%,
+            rgb(255, 165, 175) 75.82%,
+            rgb(255, 220, 164) 112%
+          )
+          text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+      }
+      .fBQXBG {
+        font-size: 4.5rem;
+        line-height: 5.625rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+      }
+      .fBQXBG {
+        font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        text-decoration: none;
+        font-size: 64px;
+      }
+      #bus {
+        margin-top: 30px;
+      }
+      .inline {
+        display: inline;
+      }
+      .inline span {
+        color: white;
+        font-size: 21px;
+        margin-left: 28px;
+      }
+      .final {
+            min-height: 65vh;
+            display: grid;
+            place-items: center;
+           
+        }
+        .final h1 {
+          font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: -60px;
+        }
+        .slider {
+            height: 130px;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+        .slide-track {
+            display: flex;
+            width: calc(250px * 18);
+            animation: scroll 60s linear infinite;
+        }
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 9));
+            }
+        }
+        .slide {
+            height: 90px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;
+        }
+        .auto {
+            width: 50%;
+            transition: transform 1s;
+            margin-left: 20px;
+        }
+       
+       
+      .second {
+       
+        height: 700px;
+      }
+      .cXWnXL {
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova",
+          sans-serif;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: rgb(29, 32, 38);
+        padding-top: 100px;
+      }
+      .second p {
+        color: rgb(80, 87, 102);
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+        
+      }
+      .rainbow {
+        display: flex;
+        justify-content: center;
+      }
+      .butt2 {
+        background-color: white;
+        color: black;
+        border: none;
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 196px;
+        height: 52px;
+        font-weight: bolder;
+        border-radius: 8px;
+        
+      }
+      .second img {
+        width: 952px;
+        height: 530px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .third {
+        background-color: #99d5ff45;
+        height: 900px;
+      }
+      .third {
+        padding-top: 500px;
+      }
+      .third p {
+        font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: rgb(29, 32, 38);
+    font-weight: bolder;
+    margin-left: 35%;
+      }
+      .third h1 {
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        margin-left: 35%;
+        margin-top: 20px;
+      }
+      .third1{
+        display: flex;
+        justify-content: center;
+       margin-top: 30px;
+      }
+      .third img {
+        width: 367px;
+        height: 370px;
+        margin-top: 100px;
+        margin-right: 0px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+      }
+      .container1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -120px;
+        
+      }
+      .box {
+        background-color: white;
+        border-radius: 15px;
+        width: 367px;
+        margin: 15px;
+        height: 142px;
+      }
+      .box:hover {
+        h1{
+          color: rgb(133, 18, 224);
+        }
+        cursor: pointer;
+      }
+      .boxx:hover {
+        h1{
+          color: rgb(133, 18, 224);
+        }
+        cursor: pointer;
+      }
+  
+      .boxx {
+        background-color: white;
+        border-radius: 15px;
+        width: 367px;
+        margin: 15px;
+        height: 90px;
+      }
+      .box h1 {
+        font: 700 1.5rem / 2.375rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        text-align: left;
+        margin-left: 30px;
+        letter-spacing: 0px;
+        margin-top: 20px;
+      }
+      .boxx h1 {
+        font: 700 1.5rem / 2.375rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        text-align: left;
+        margin-left: 30px;
+        letter-spacing: 0px;
+        margin-top: 25px;
+      }
+      .box p{
+        font: 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif!important;
+    color: rgb(93, 100, 118);
+    text-align: left!important;
+    margin-left: 30px!important;
+    margin-top: 11px!important;
+    text-transform: none;
+    letter-spacing: 0px;
+      }
+      .third span {
+        color: rgb(133, 18, 224);
+        margin-left: 56%;
+        text-transform: none;
+        margin-bottom: 100px;
+        font-size: 19px;
+       
+        
+      }
+      .fourth h1 {
+        font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+       text-align: center;
+        margin-top: 80px;
+      }
+      
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  
+  
+  width: auto;
+  margin-top: 22px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.content3 {
+    width: 1157px;
+    height: 536px;
+    background-color: rgb(203, 231, 163);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+   
+    margin-top: 60px;
+}
+.content2 {
+    width: 1157px;
+    height: 536px;
+    background-color: rgb(167, 223, 242);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 60px;
+}
+.content {
+    width: 1157px;
+    margin-top: 60px;
+    height: 536px;
+    background-color: rgb(255, 224, 174);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+   
+}
+.birds{
+    width: 130%;
+}
+.birds1{
+    width: 100%;
+}
+.birds2{
+    width: 107%;
+}
+.birds img {
+    height: 400px;
+    width: 400px;
+    margin-top: 60px;
+    
+    
+}
+.birds1 img {
+    height: 400px;
+    width: 400px;
+    margin-top: 60px;
+    
+    
+    
+}
+.birds2 img {
+    height: 400px;
+    width: 400px;
+    margin-top: 60px;
+    
+    
+    
+}
+.qoutes p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    color: rgb(29, 32, 38);
+    margin-left: 9%;
+    margin-right: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-top: 30px;
+}
+.qoutes img {
+    margin-top: 40px;
+    margin-left: 9%;
+    height: 50px;
+    width: 40px;
+    margin-top: 70px;
+}
+.qoutes h1 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 30px;
+}
+.qoutes h3 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 30px;
+}
+.qoutes1 p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    color: rgb(29, 32, 38);
+    margin-left: 9%;
+    margin-right: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-top: 30px;
+}
+.qoutes1 img {
+    margin-top: 40px;
+    margin-left: 9%;
+    height: 50px;
+    width: 40px;
+    margin-top: 70px;
+}
+.qoutes1 h1 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 30px;
+}
+.qoutes1 h3 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 30px;
+}
+.qoutes2 p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    color: rgb(29, 32, 38);
+    margin-left: 9%;
+    margin-right: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-top: 27px;
+}
+.qoutes2 img {
+    margin-top: 40px;
+    margin-left: 9%;
+    height: 50px;
+    width: 40px;
+    margin-top: 65px;
+}
+.qoutes2 h1 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 27px;
+}
+.qoutes2 h3 {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-left: 9%;
+    margin-top: 27px;
+}
+.card .image-box {
+        height: 300px;
+      }
+      .card .image-box img {
+        
+        border-radius: 6px 6px 0 0;
+        width: 100%;
+      }
+      .slide-container {
+        margin: 0 30px;
+        overflow-x: hidden;
+        height: 600px;
+        overflow-y: hidden;
+      }
+      .fifth {
+        min-height: 600px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+       margin-top: 80px;
+        overflow-y: hidden;
+      }
+      .cont {
+        max-width: 1120px;
+        width: 70%;
+        overflow-y: hidden;
+        padding: 40px 0;
+
+      }
+      .card .profile-details {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        padding: 15px;
+        
+      }
+      .card .profile-details img{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      } 
+      .card {
+        background: #fff;
+        border-radius: 17px;
+        margin-left: 50px;
+        width: 342px!important;
+        height: 542px;
+        box-shadow:0 4px 8px rgba(0, 0, 0, 0.1), /* Bottom shadow */
+                  0 -4px 8px rgba(0, 0, 0, 0.1), /* Top shadow */
+                  4px 0 8px rgba(0, 0, 0, 0.1), /* Right shadow */
+                  -4px 0 8px rgba(0, 0, 0, 0.1); /* Left shadow */;
+        
+        
+      }
+     
+      .swiper-navBtn{
+        color: white;
+      height: 40px;
+      width: 40px;
+      background: #000;
+      border-radius: 50%;
+
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after {
+        font-size: 18px;
+      }
+      .swiper-pagination-bullet {
+        background-color: #000;
+      }
+      @media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+.ai span {
+  font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    text-align: start;
+    color: #1D2026;
+}
+.ai h1 {
+  font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        text-align: start;
+        color: #1D2026;
+        margin-top: 20px;
+}
+.ai p {
+  font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.375rem;
+  color: rgb(80, 87, 102);
+  text-align: start;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.ai {
+  width: 29%;
+  margin-left: 6%;
+  margin-right: -1%;
+  margin-top: 30px;
+
+}
+.name {
+  font: 700 1.5rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 0em;
+    color: #1D2026;
+}
+.job {
+  font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    color: rgb(93, 100, 118);
+    height: auto;
+}
+.six {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 70px;
+  align-items: center;
+}
+.web {
+  width: 50%;
+}
+.web img {
+  height: 557px;
+  width: 557px;
+  margin-left: 14%;
+}
+.life p {
+  font: 23px Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: rgb(29, 32, 38);
+    line-height: 30px;
+    margin-left: 8%;
+    margin-top: 20px;
+    text-transform: none;
+}
+.life h1 {
+  font: 700 3.75rem / 4.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        color: rgb(29, 32, 38);
+        margin-left: 8%;
+        margin-top: 20px;
+}
+.life span {
+  margin-left: 9%;
+}
+.at {
+  display: flex;
+  margin-left: 8%;
+  
+}
+.at button {
+  width: 234px;
+  height: 52px;
+  font-size: 18px;
+  margin-top: 35px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 8px;
+  
+}
+.at button:hover{
+  background-color: #1D2026;
+  color: white;
+  border: none;
+}
+.at span {
+  color: rgb(133, 18, 224);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.life {
+  margin-right: 4%;
+  width: 42%;
+  
+}
+.seventh{
+  height: 340px;
+  padding-top: 180px;
+}
+.seventh h1 {
+  font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #1D2026;
+}
+.top {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+.top img {
+  width: 170px;
+  height: 185px;
+}
+.eight {
+  height: 430px;
+  background-color: rgb(89, 242, 246);
+
+}
+.eight h1 {
+  font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: rgb(29, 32, 38);
+        margin-left: 11%;
+        margin-right: 11%;
+        padding-top: 100px;
+}
+  .eight p {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    font-size: 1.5rem;
+        line-height: 2.375rem;
+        color: rgb(80, 87, 102);
+        text-align: center;
+        margin-top: 25px;
+  }
+  .eight button {
+    background-color: rgb(133, 18, 224);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(133, 18, 224);
+        box-shadow: none;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 163.83px;
+        height: 62px;
+        font-weight: bolder;
+        border-radius: 8px;
+  }
+  .eight button:hover {
+    background-color: rgb(97, 18, 224);
+    border: none;
+  }
+  .eight span {
+    color: rgb(133, 18, 224);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-left: 30px;
+  }
+  .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .nine span {
+    font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    margin-right: 1rem;
+    color: rgb(29, 32, 38);
+    font-weight: bold;
+    line-height: 50px;
+  }
+  .nine a {
+    cursor: pointer;
+    font-weight: normal;
+  }
+  .nine {
+    margin-top: 50px;
+    padding-left: 7%;
+   
+  }
+  .nine hr {
+   
+    margin-right: 8%;
+    opacity: 0.2;
+  }
+  .last {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .company {
+    width: 28.5%;
+    margin-top: 50px;
+  }
+  .support {
+    width: 28.5%;
+    margin-top: 50px;
+  }
+  .success {
+    width: 28.5%;
+    margin-top: 50px;
+  }
+  .company h1 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 0.625rem;
+    color: rgb(29, 32, 38);
+    font-weight: bolder;
+  }
+  .support h1 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 0.625rem;
+    color: rgb(29, 32, 38);
+    font-weight: bolder;
+  }
+  .success h1 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 0.625rem;
+    color: rgb(29, 32, 38);
+    font-weight: bolder;
+  }
+  .company p {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    font-size: 0.95rem;
+    line-height: 40px;
+    opacity: 1;
+    color: #1D2026;
+   font-weight: 400;
+   opacity: 0.9;
+  }
+  .support p {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    font-size: 0.95rem;
+    line-height: 40px;
+    opacity: 1;
+    color: #1D2026;
+   font-weight: 400;
+   opacity: 0.9;
+  }
+  .success p {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    font-size: 0.95rem;
+    line-height: 40px;
+    opacity: 1;
+    color: #1D2026;
+   font-weight: 400;
+   opacity: 0.9;
+  }
+  .success p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .support p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .company p:hover {
+        color: rgb(149, 31, 247);
+        cursor: pointer;
+      }
+      .android:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      .apple:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+  .ten {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .end {
+    display: flex;
+    justify-content: center;
+    margin-left: 7%;
+  }
+  .download {
+    display: flex;
+    margin-right: 90px;
+  }
+  .x {
+    margin-top: 15px;
+    background-color: #ebebebc2;
+    border-radius: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin-left: 12px;
+
+  }
+  .r {
+    margin-top: 14px;
+    margin-right: 9px;
+  }
+  .android {
+    height: 45px;
+    width: 140px;
+    background-color: black;
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .apple {
+    height: 45px;
+    width: 140px;
+    background-color: black;
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .android span {
+font-size: 9px;
+line-height: 20px;
+margin-top : -5px;
+  }
+  .apple span {
+font-size: 9px;
+line-height: 20px;
+margin-top : -5px;
+margin-left: 6px;
+  }
+  .android p {
+    font-size: 17px;
+    line-height: 12px;
+    
+  }
+  .apple p {
+    font-size: 17px;
+    line-height: 12px;
+    margin-left: 0px;
+    
+  }
+.android img {
+  margin-left: 7px;
+}
+.apple img {
+  margin-left: 7px;
+}
+.eleven hr{
+   margin-right: 8%;
+   opacity: 0.2;
+   margin-top: 10px;
+   margin-left: 8%;
+}
+.twelwe {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 6%;
+ 
+  margin-top: 50px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+.twelwe p {
+    font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    font-size: 0.8rem;
+    margin: 10px 14px;
+    color: #1D2026;
+   font-weight: 400;
+   opacity: 0.9;
+  }
+  .outer {
+      display: flex;
+      border-radius: 9px;
+      width: 123.83px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+      background: #202020;
+      margin-top: -15px;
+    }
+    .butt:hover {
+      border: none;
+    }
+   
+    
+    
+    .outer:hover {
+      animation: rotate 1.5s linear infinite;
+      background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    }
+    @keyframes rotate {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg);
+      }
+    }
+    .outer1 {
+      display: flex;
+      border-radius: 9px;
+      width: 199px;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+      background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+      animation: rotate1 1.5s linear infinite;
+      margin: 30px;
+    }
+    .outer1:hover {
+      background: white;
+      
+    }
+    .butt2:hover {
+      background-color: #2b2b2c;
+      color: white;
+    }
+    @keyframes rotate1 {
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg);
+      }
+    }
+    @media (min-width: 300px) and (max-width: 1200px) {
+     
+     .first{
+      
+      width: 1200px;
+     }
+     .nav{
+      width: 1200px;
+     }
+     .form {
+      width: 70%;
+     }
+    
+     .second{
+      width: 1200px;
+     }
+     .third{
+      width: 1200px;
+     }
+     .fourth{
+      width: 1200px;
+     }
+     .check{
+      width: 1190px;
+     }
+    .slideshow-container{
+      width: 1200px;
+      
+    }
+   
+     .fifth{
+      width: 1200px;
+     }
+     .six{
+      width: 1200px;
+     }
+     .seventh{
+      width: 1200px;
+     }
+     .eight{
+      width: 1200px;
+     }
+     .nine{
+      width: 1100px;
+      margin-left: 8%;
+     }
+     .last{
+      width: 1200px;
+     }
+     .ten{
+      width: 1200px;
+     }
+     .ten{
+      width: 1200px;
+     }
+     .eleven{
+      width: 1200px;
+     }
+     .twelwe{
+      width: 1100px;
+     
+     }
+     
+    
+  }
+  @media (min-width: 300px) and (max-width: 700px){
+    .twelwe{
+        
+      margin-left: 12% !important;
+     }
+    .nine{
+        
+      margin-left: 12% !important;
+     }
+  }
+
+  @media (min-width: 300px) and (max-width: 1000px){
+    .important{
+      display: none;
+    }
+    .third span {
+      text-align: center;
+      margin-left: 35%;
+    }
+    .web {
+      width: 60%;
+    }
+    .fifth{
+      flex-direction: column;
+      
+    }
+    .ai {
+      margin: 50px 60px;
+      width: 98%;
+    }
+    .six {
+      flex-direction: column-reverse;
+    }
+    .at {
+      flex-direction: column;
+    }
+    .at button{
+      height: 90px;
+      width: 100%;
+    }
+    .at span {
+      margin: 50px 0;
+    }
+    .same {
+      flex-direction: column;
+    }
+    .sum {
+      width: 90%;
+    }
+    .sim {
+      width: 80%;
+    }
+  }
+  @media (min-width: 300px) and (max-width: 700px) {
+      .company{
+        width: 85%;
+      }
+      .success{
+        width: 85%;
+      }
+      .support{
+        width: 85%;
+      }
+      .twelwe p {
+       
+        text-align: left;
+        line-height: 30px;
+      }
+      
+    }
+   
+
+   
+    
+       
+    .buttttt {
+        background-color: rgb(133, 18, 224);
+        color: white;
+        border: none;
+        box-shadow: none;
+        font-size: 1.325rem;
+        line-height: 1.75rem;
+        width: 80%;
+        height: 70px;
+        font-weight: bolder;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+      }
+    
+
+
+     
+    </style>
+
+<nav>
+  <ul class="sidebar">
+    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li><a href="index.html"><img src="headerLogoLight.webp" height="28px" width="140px"></a></li>
+  <br><hr><li><a href="#">services</a></li><hr>
+  <li><a href="#">industries</a></li><hr>
+  <li><a href="#">support</a></li><hr>
+  <li><a href="demo.html">Demo</a></li><hr>
+  <li><a href="pricing.html">Pricing</a></li><hr>
+  <li><a href="#">languages</a></li><hr>
+  <li><a href="#">login</a></li><hr>
+  <a href="#"><button class="buttttt">Start free trial</button></a>
+  
+  
+</ul>
+  <ul>
+    <div>
+    <li><a href="index.html"><img src="headerLogoLight.webp" height="28px" width="140px"></a></li>
+  <li class="hideOnMobile"><a href="#">services</a></li>
+  <li class="hideOnMobile"><a href="#">industries</a></li>
+  <li class="hideOnMobile"><a href="#">support</a></li></div>
+  <div>
+  <li class="hideOnMobile"><a href="demo.html">Demo</a></li>
+  <li class="hideOnMobile"><a href="pricing.html">Pricing</a></li>
+  <li class="hideOnMobile"><a href="#"><img src="9022497_globe_simple_duotone_icon.png" height="30px" width="30px"/></a></li>
+  <li class="hideOnMobile"><a href="#"><img src="2867954_user_icon.png" height="30px" width="30px"/></a></li>
+  <li class="hideOnMobile"><a href="#"> <div class="outer button"><button class="butt">Free trials</button></div></a></li>
+  <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li></div>
+</ul>
+ </nav>
+
+
+
+    <div class="first">
+      <div class="same">
+        <div class="sum">
+          <h1 class="fBQXBG">
+            Same easy software. New
+            <span class="bppLfp dEHGKh">AI superpowers.</span>
+          </h1>
+          <p>
+            Customer service, IT, and CRM software that’s powerful yet easy to
+            use. Now supercharged with generative AI.
+          </p>
+          <div class="inline">
+            <a href="#"><button class="buttt" id="bus">Free trials</button></a
+            ><span>Demos &rarr;</span>
+          </div>
+        </div>
+        s
+      </div>
+
+      <div class="final">
+        <h1>TRUSTED BY 60,000+ BUSINESSES OF ALL SIZES</h1>
+        <div class="slider">
+            <div class="slide-track">
+    
+                <div class="slide">
+                    <img class="auto" src="1.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="2.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="3.png">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="4.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="6.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="7.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="8.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="9.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="10.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="11.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="12.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="13.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="7.webp">
+                </div>
+                <div class="slide">
+                    <img class="auto" src="6.webp">
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- first section ends here -->
+    <div class="second">
+      <h2 class="sc-4555ca6a-0 cXWnXL">
+        Happy customers. Energized employees. That’s impact.
+      </h2>
+      <p>
+        Choose one. Or all. You’ll see better customer relationships and happier
+        employees—without the bloat, hassle, and expense of typical business
+        software. Plus, you’ll get plenty of help from Freddy AI.
+      </p>
+      <div class="rainbow">
+        <div class="outer1 button1">
+        <button class="butt2">Rainbow Button</button></div>
+        <div class="outer1 button1">
+        <button class="butt2">IT Service</button></div>
+        <div class="outer1 button1">
+        <button class="butt2">CRM</button></div>
+      </div>
+      <img src="crm-screenshot-939x521.webp">
+    </div>
+    <!-- second section ends here -->
+    <div class="third">
+      
+      <p>FRESHWORKS PRODUCTS</p>
+      <h1>All SaaS, no bloat.</h1>
+      <div class="third1">
+        <div class="important"><img src="freshchat.webp"></div>
+        <div class="container">
+          <div class="box"><h1>Customer Service Suite &rarr;</h1>
+          <p>Get the whole package with our all-in-one solution, boosted with generative AI.</p></div>
+          <div class="box"><h1>Freshchat &rarr;</h1>
+            <p>Have more meaningful conversations, across every channel, with every customer.</p></div>
+            <div class="box"><h1>Freshsales &rarr;</h1>
+              <p>Sell smarter and faster while leaving time-consuming tasks to automation.</p></div>
+          <div class="boxx"><h1>All products and trials &rarr;</h1></div>
+        </div>
+        <div class="container1">
+          <div class="box"><h1>Freshservice &rarr;</h1>
+            <p>Modernize IT service and operations with an intuitive, completely integrated IT.</p></div>
+          
+          <div class="box"><h1>Freshdesk &rarr;</h1>
+            <p>Scale faster with a unified, intelligent customer support platform.</p></div>
+          <div class="box"><h1>Freshmarketer &rarr;</h1>
+            <p>Attract, engage, and nurture your customers through the engagement channels they love.</p></div>
+            
+         
+        </div>
+      </div><br><br><span> All Products & Trials &rarr;</span>
+     </div>
+     <!-- third section ends here -->
+     <div class="fourth"><h1>Don’t just take it from us</h1></div>
+       <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+   
+    <div class="content">
+      <div class="qoutes1">
+          <img src="quote2-64.webp" >
+          <p>
+              Reducing our no-show rate was important to have higher utilization of our sales team. With Freshsales, we brought it down to about 20%, and time is money.
+
+              <h1> Mike Hopkins</h1>
+              <p> Senior VP, Sales and Service, Blue Nile</p>
+              
+              
+              <h3>Watch video &rarr;</h3>
+      </div>
+      <div class="birds1">
+    <img src="bluenile-video-testimonial-400x400.webp" >
+  </div>  
+  </div></div>
+  <div class="mySlides fade">
+   
+    <div class="content2">
+      <div class="qoutes2">
+          <img src="quote2-64.webp" >
+          <p>
+             
+              Freshservice is so intuitive and user-friendly. Our end-users find it very simple to raise a ticket and support agents are able to easily transfer tickets within departments.</p>
+              
+              <h1>Christy Cooper</h1>
+              <p>Senior IT Operations Analyst, Alterra Mountain Company</p>
+              <h3>Watch video &rarr;</h3>
+      </div>
+      <div class="birds2">
+    <img src="alterra-logo-400x400.webp" >
+  </div>  
+  </div></div>
+  <div class="mySlides fade">
+   
+    <div class="content3">
+      <div class="qoutes">
+          <img src="quote2-64.webp" >
+          <p>
+              We use Freshservice for everything, and that just makes it really easy—regardless of what you need as an employee—to know that you can always just go to this tool and you're going to get whatever you need.</p>
+              <h1>Rey Davila</h1>
+              <p>System Administrator, Allbirds</p>
+              <h3>Watch video &rarr;</h3>
+      </div>
+      <div class="birds">
+    <img src="allbirds-logo-400x400.webp" >
+  </div>  
+  </div></div>
+
+  
+
+  <!-- Next and previous buttons -->
+ 
+  
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div class="check" style="text-align:center">
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<!-- fourth sec ends here -->
+
+<div class="fifth">
+  <div class="ai">
+    <span>
+      TRENDING
+    </span>
+    <h1>
+      See what’s new
+    </h1>
+    <p>
+      News, events, and insights into the ways Freshworks is making work faster, easier, and more human with advanced AI.
+    </p>
+  </div>
+  <div class="cont swiper">
+    <div class="slide-container">
+      <div class="card-wrapper swiper-wrapper">
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="51.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">Explore Freddy Copilot: the ultimate productivity booster</h3>
+              <h4 class="job">Unleash the power of generative AI solutions and unlock productivity for</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="52.webp" />
+          </div>
+          <div class="profile-details">
+           
+            <div class="name-job">
+              <h3 class="name">Meet Freddy AI by Freshworks</h3>
+              <h4 class="job">See how easy it can be to leverage the power of AI in your business.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="53.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">New Customer Service Suite</h3>
+              <h4 class="job">Introducing all-in-one self-service, conversational support, and...</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="54.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">Introducing The Works</h3>
+              <h4 class="job">Dive into ideas and insights for today’s IT-minded business leaders</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="55.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">Turn AI from hype into reality</h3>
+              <h4 class="job">Everything you need to know about using generative AI in customer...</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="56.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">Announcing Freddy AI + GPT</h3>
+              <h4 class="job">We’re bringing the power of AI and GPT models to the Freshworks</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="57.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">Gartner names Freshworks a Challenger</h3>
+              <h4 class="job">Gartner recognizes Freshworks as a Challenger in the Gartner® Magic</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="58.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">100 innovations and ideas shaping business</h3>
+              <h4 class="job">Freshworks CIO says companies will deploy more bots in 2023 to reduce</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-box">
+            <img src="59.webp" />
+          </div>
+          <div class="profile-details">
+            
+            <div class="name-job">
+              <h3 class="name">More impact, less stress</h3>
+              <h4 class="job">See how IT, customer service, and CRM teams succeed with</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+  </div></div>
+
+<div class="six">
+  <div class="web"><img src="Life-at-Freshworks.webp"></div>
+  <div class="life">
+    <span>LIFE AT FRESHWORKS</span>
+  <h1>Build your career with us</h1>
+  <p>Freshworks is 5,000+ employees across 13 global locations focused on one goal: to help more people find success. Come do your best work with us.</p>
+  <div class="at">
+  <button class="see">Careers at Freshworks</button><span>See how we work > </span></div>
+</div>
+</div>
+<!-- sixth sec ends here -->
+<div class="seventh">
+  <h1>Recommended by leading industry experts</h1>
+  <div class="top"><img src="gartner-magicquadrant-220x240.webp" ><img src="G2-Best-software-award-2023.webp" ><img src="best-of-price-winter-2023-tr.webp" ><img src="Forrester-Accolade-220x240.webp" ></div>
+</div>
+<div class="eight">
+  <h1>60,000+ global customers found a better way to work. Your turn.</h1>
+  <p>Start your 14-day free trial. No credit card required.</p>
+  <div class="start">
+  <button>Start free trial </button><span> Get a demo ></span></div>
+
+</div>
+
+<div class="nine">
+  <span>Contact Freshworks
+    <a href="#">+1 (855) 747 6767 or sales@freshworks.com</a></span>
+    <hr>
+</div>
+
+<div class="last">
+  <div class="company"><h1>Company</h1>
+  <p>About</p>
+  <p>Leadership</p>
+  <p>Investors</p>
+  <p>Careers</p>
+  <p>Customers</p>
+  <p>Partners</p>
+  <p>Events</p>
+  <p>Insights & Trends</p>
+  <p>News</p>
+  <p>Contact</p>
+  </div>
+  <div class="support"><h1>Support & Success</h1>
+    <p>Support</p>
+    <p>Training & Certification</p>
+    <p>Services</p>
+    <p>Student Academy</p>
+    <p>Community</p>
+  </div>
+  <div class="success"><h1>Products</h1>
+    <p>What’s New</p>
+    <p>Customer Service Suite</p>
+    <p>Freshdesk</p>
+    <p>Freshchat</p>
+    <p>Freshservice</p>
+    <p>Freshsales</p>
+    <p>Freshsales Suite</p>
+    <p>Freshmarketer</p>
+    <p>Freshworks Neo</p>
+    <p>Freddy AI</p>
+  </div>
+</div>
+<div class="ten">
+  <div class="end">
+    <img class="r" src="headerLogoLight.webp" height="35px" width="150px">
+    <div class="x"><img src="11244080_x_twitter_elon musk_twitter new logo_icon.png" height="15px"></div>
+    <div class="x"><img src="LinkedIn_alt-64.webp" height="15px"></div>
+    <div class="x"><img src="06-facebook-64.webp" height="15px"></div>
+    <div class="x"><img src="_youtube_video-64.webp" height="15px"></div>
+  </div>
+  <div class="download">
+    <div class="android"><img src="PlayStore-64.webp" height="33px"><span>GET IT ON<p>Google Play</p></span></div>
+    <div class="apple"><img src="2553039_app_apple_appstore_logo_device_icon (1).png" height="33px"><span>Download on the<p>App Store</p></span></div>
+  </div>
+</div>
+<div class="eleven"><hr></div>
+<div class="twelwe">
+<p>Legal</p>
+<p>Privacy Notice</p>
+<p>Site Terms</p>
+<p>Cookie Policy</p>
+<p>Do Not Share My Personal Information</p>
+<p>Security</p>
+<p>Accessibility</p>
+<p>Unsubscribe</p>
+<p>Sitemap</p>
+<p>© 2024 Freshworks Inc. All Rights Reserved</p>
+</div>
+
+
+
+
+<script src="swiper-bundle.min.js"></script>
+<script>
+
+ function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+
+
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+
+
+var swiper = new Swiper(".slide-container", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      centerSlide: "true",
+      fade: "true",
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+     
+    });
+
+    
+    
+</script>
+  </body>
+</html>

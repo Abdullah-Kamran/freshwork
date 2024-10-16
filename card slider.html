@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+  </head>
+  <body>
+    <style>
+      .card .image-box {
+        height: 300px;
+      }
+      .card .image-box img {
+        
+        border-radius: 6px 6px 0 0;
+        width: 100%;
+      }
+      .slide-container {
+        margin: 0 30px;
+        overflow-x: hidden;
+        height: 600px;
+        overflow-y: hidden;
+      }
+      .fifth {
+        min-height: 600px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+       
+        overflow-y: hidden;
+      }
+      .cont {
+        max-width: 1120px;
+        width: 70%;
+        overflow-y: hidden;
+        padding: 40px 0;
+
+      }
+      .card .profile-details {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        padding: 15px;
+        
+      }
+      .card .profile-details img{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      } 
+      .card {
+        background: #fff;
+        border-radius: 17px;
+        margin-left: 50px;
+        width: 342px!important;
+        height: 542px;
+        box-shadow:0 4px 8px rgba(0, 0, 0, 0.1), /* Bottom shadow */
+                  0 -4px 8px rgba(0, 0, 0, 0.1), /* Top shadow */
+                  4px 0 8px rgba(0, 0, 0, 0.1), /* Right shadow */
+                  -4px 0 8px rgba(0, 0, 0, 0.1); /* Left shadow */;
+        
+        
+      }
+     
+      .swiper-navBtn{
+        color: #000;
+      height: 40px;
+      width: 40px;
+      background: #fff;
+      border-radius: 50%;
+
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after {
+        font-size: 18px;
+      }
+      .swiper-pagination-bullet {
+        background-color: #000;
+      }
+      @media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+.ai span {
+  font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    text-align: start;
+    color: #1D2026;
+}
+.ai h1 {
+  font: 700 3rem / 3.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+        text-align: start;
+        color: #1D2026;
+}
+.ai p {
+  font-family: Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.375rem;
+  color: rgb(80, 87, 102);
+  text-align: start;
+  font-weight: 400;
+}
+.ai {
+  width: 29%;
+  margin-left: 6%;
+  margin-right: -1%;
+  margin-top: 30px;
+
+}
+.name {
+  font: 700 1.5rem / 2rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    letter-spacing: 0em;
+    color: #1D2026;
+}
+.job {
+  font: 1.125rem / 1.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+    color: rgb(93, 100, 118);
+    height: auto;
+}
+
+    </style>
+    <div class="fifth">
+      <div class="ai">
+        <span>
+          TRENDING
+        </span>
+        <h1>
+          See what’s new
+        </h1>
+        <p>
+          News, events, and insights into the ways Freshworks is making work faster, easier, and more human with advanced AI.
+        </p>
+      </div>
+      <div class="cont swiper">
+        <div class="slide-container">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="51.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">Explore Freddy Copilot: the ultimate productivity booster</h3>
+                  <h4 class="job">Unleash the power of generative AI solutions and unlock productivity for</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="52.webp" />
+              </div>
+              <div class="profile-details">
+               
+                <div class="name-job">
+                  <h3 class="name">Meet Freddy AI by Freshworks</h3>
+                  <h4 class="job">See how easy it can be to leverage the power of AI in your business.</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="53.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">New Customer Service Suite</h3>
+                  <h4 class="job">Introducing all-in-one self-service, conversational support, and...</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="54.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">Introducing The Works</h3>
+                  <h4 class="job">Dive into ideas and insights for today’s IT-minded business leaders</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="55.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">Turn AI from hype into reality</h3>
+                  <h4 class="job">Everything you need to know about using generative AI in customer...</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="56.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">Announcing Freddy AI + GPT</h3>
+                  <h4 class="job">We’re bringing the power of AI and GPT models to the Freshworks</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="57.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">Gartner names Freshworks a Challenger</h3>
+                  <h4 class="job">Gartner recognizes Freshworks as a Challenger in the Gartner® Magic</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="58.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">100 innovations and ideas shaping business</h3>
+                  <h4 class="job">Freshworks CIO says companies will deploy more bots in 2023 to reduce</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="59.webp" />
+              </div>
+              <div class="profile-details">
+                
+                <div class="name-job">
+                  <h3 class="name">More impact, less stress</h3>
+                  <h4 class="job">See how IT, customer service, and CRM teams succeed with</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+       var swiper = new Swiper(".slide-container", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      centerSlide: "true",
+      fade: "true",
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+     
+    });
+    </script>
+  </body>
+</html>
